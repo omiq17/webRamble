@@ -12,7 +12,85 @@
   </head>
 
   <body>
-    <h1>Hello, webRamble!</h1>
+    <h1 class="text-center text-uppercase">Hello, webRamble!</h1>
+    <!--Contact-section-->
+  <div class="container contact-section" id="Contact">
+      <h4 class="text-center text-uppercase">contact with us</h4><hr>
+    <div class="row">
+      <div class="col-md-12 form-section">
+        <form action="contact.php" method="post" role="form" id="contact-form">
+              
+              <div class="messages"></div>
+
+              <div class="controls">
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="form_name">
+                      FirstName *
+                    </label>
+                    <input type="text" name="name" id="form_name" class="form-control" placeholder="Please Enter Your First Name *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="form_lastname">
+                      LastName *
+                    </label>
+                    <input type="text" name="surname" id="form_lastname" class="form-control" placeholder="Please Enter Your Last Name" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="form_email">
+                      Email *
+                    </label>
+                    <input type="email" name="email" id="form_email" class="form-control" placeholder="someone@domain.com" required="required" data-error="valid email is required.">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="form_phone">
+                      Phone
+                    </label>
+                    <input type="tel" name="phone" id="form_phone" placeholder="xxxxxxxxxxx" class="form-control">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="form_message">
+                      Message *
+                    </label>
+                    <textarea class="form-control" placeholder="Your Messages" required="required" data-error="Please leave us a message." name="message" id="form_message" rows="4"></textarea>
+                    <div class="help-block with-error"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <input type="submit" name="send" value="Submit Here" class="btn btn-success btn-send">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="text-muted">
+                    <strong>*</strong> These fields are required.
+                  </p>
+                </div>
+              </div>
+              </div>
+            </form>
+      </div>
+    </div>
+  </div>
+  <!--endd of contact section-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
