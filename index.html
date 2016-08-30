@@ -9,15 +9,61 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/ideal-image-slider.css">
+  	<link rel="stylesheet" href="css/default.css">
   </head>
 
   <body>
-    <h1>Hello, webRamble!</h1>
+    <header id="header">
+      <div class="container">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a class="hvr-underline-reveal" href="#">About</a></li>
+                <li><a class="hvr-underline-reveal" href="#">What We Do</a></li>
+                <li><a class="hvr-underline-reveal" href="#">Portfolio</a></li>
+                <li><a class="hvr-underline-reveal" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="slider" class="container">
+  		<img src="img/2.jpg" data-src-2x="img/2@2x.jpg" alt="Slide 1" />
+  		<img data-src="img/1.jpg" data-src-2x="img/1@2x.jpg" src="" alt="Slide 2" />
+  		<img data-src="img/3.jpg" data-src-2x="img/3@2x.jpg" src="" alt="Slide 3" />
+  	</div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script src="js/jquery-3.1.0.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ideal-image-slider.js"></script>
+  	<script src="js/iis-bullet-nav.js"></script>
+    <script>
+  	var slider = new IdealImageSlider.Slider({
+      selector: "#slider",
+      effect: 'fade',
+      interval: 3001,
+      transitionDuration: 551
+    });
+  	slider.addBulletNav();
+  	slider.start();
+  	</script>
   </body>
 </html>
