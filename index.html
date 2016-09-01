@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
   	<link rel="stylesheet" href="css/ideal-image-slider.css">
   	<link rel="stylesheet" href="css/default.css">
@@ -41,11 +42,44 @@
       </div>
     </header>
 
-    <div id="slider" class="container">
+    <div id="slider">
   		<img src="img/2.jpg" data-src-2x="img/2@2x.jpg" alt="Slide 1" />
   		<img data-src="img/1.jpg" data-src-2x="img/1@2x.jpg" src="" alt="Slide 2" />
   		<img data-src="img/3.jpg" data-src-2x="img/3@2x.jpg" src="" alt="Slide 3" />
   	</div>
+
+    <div id="about">
+      <div class="container" id="main">
+        <div class="left col-sm-6 col-xs-12">
+          <h1>What We Are All About</h1>
+        </div>
+        <div class="right col-sm-6 col-xs-12">
+          <p>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts. Separated they
+            live in Bookmarksgrove right at the coast of the Semantics,
+            a large language ocean. A small river named Duden flows by their
+            place and supplies it with the necessary regelialia.It is a
+            paradisematic country, in which roasted parts of sentences fly into
+            your mouth. Even the all-powerful Pointing has no control about the
+            blind texts it is an almost unorthographic life One day.
+          </p>
+        </div>
+      </div>
+      <section class="section-divider textdivider divider4">
+      			<div class="container">
+      				<h1>We Help You To Go One Step Ahead With Us</h1>
+      				<hr>
+      				<p>There’s more to design than meets the eye. It’s when it meets the heart that design creates a meaningful, lasting connection with the audience.</p>
+      			</div><!-- container -->
+      		</section>
+    </div>
+    <!-- <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>So,You need us?<br>We are willing to help you.</h1>
+        </div>
+    </aside> -->
+
 
     <!--Contact-section-->
     <div class="container contact-section" id="contact">
@@ -134,14 +168,59 @@
     <script src="js/ideal-image-slider.js"></script>
   	<script src="js/iis-bullet-nav.js"></script>
     <script>
-  	var slider = new IdealImageSlider.Slider({
-      selector: "#slider",
-      effect: 'fade',
-      interval: 3001,
-      transitionDuration: 551
+    $(document).ready(function(){
+      ///////////////
+      // slider setup
+      ///////////////
+      var slider = new IdealImageSlider.Slider({
+        selector: "#slider",
+        effect: 'fade',
+        interval: 3001,
+        transitionDuration: 551
+      });
+    	slider.addBulletNav();
+    	slider.start();
+
+      ///////////////
+      // navbar animation setup
+      ///////////////
+      var height = $("#header").height();
+      var header = $("header");
+      var menu = $("#header .navbar-default .navbar-nav>li>a");
+      var brand = $("#header .navbar-brand");
+      var lastScrollTop = 0;
+      $(document).on('scroll',function() {
+        if($(window).width()>=968){
+          if($(this).scrollTop()+(2.5*height)>=$('#about').position().top) {
+            header.css("background", "ghostwhite");
+            menu.css("color", "#286090");
+            brand.css("color", "#286090");
+            header.addClass("navbar-fixed-top animateSlideInDown");
+          } else if ($(this).scrollTop()+(2.5*height)<=$('#about').position().top) {
+            header.css("background", "#286090");
+            menu.css("color", "ghostwhite");
+            brand.css("color", "ghostwhite");
+            header.removeClass("navbar-fixed-top animateSlideInDown");
+          }
+        } else {
+          console.log($(this).scrollTop());
+          var st = $(this).scrollTop();
+             if (st < lastScrollTop && st>150){
+               header.css("background", "ghostwhite");
+               menu.css("color", "#286090");
+               brand.css("color", "#286090");
+               header.addClass("navbar-fixed-top animateSlideInDown");
+             } else {
+               header.css("background", "#286090");
+               menu.css("color", "ghostwhite");
+               brand.css("color", "ghostwhite");
+               header.removeClass("navbar-fixed-top animateSlideInDown");
+             }
+             lastScrollTop = st;
+        }
+
+      })
     });
-  	slider.addBulletNav();
-  	slider.start();
   	</script>
   </body>
 </html>

@@ -1,8 +1,3 @@
-/*************
- font Oxigen
-*************/
-@import 'https://fonts.googleapis.com/css?family=Dosis';
-
 body {
   font-family: 'Dosis', sans-serif;
   font-size: 16px;
@@ -11,7 +6,10 @@ body {
  header
 *************/
 #header {
-  margin-top: 15px;
+  background: #286090;
+}
+#header .container {
+  padding-top: 9px;
 }
 #header .navbar-default {
   border: transparent;
@@ -27,16 +25,61 @@ body {
   color: red;
 }
 #header .navbar-default .navbar-nav>li>a {
-    color: #2098d1;
+    color: ghostwhite;
+}
+#header .navbar-default .navbar-nav>li>a:hover {
+    color: lightcoral !important;
+    -webkit-transition: all ease-in 0.3s;
+    -moz-transition: all ease-in 0.3s;
+    transition: all ease-in 0.3s;
 }
 #header .navbar {
-  margin-bottom: 15px;
+  margin-bottom: 9px;
 }
 #header .navbar-brand {
+  color: ghostwhite;
   font-weight: bold;
   font-size: 21px;
 }
+#header .navbar-brand:hover {
+    color: lightcoral !important;
+    -webkit-transition: all ease-in 0.3s;
+    -moz-transition: all ease-in 0.3s;
+    transition: all ease-in 0.3s;
+}
+/*animations*/
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
 
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+#header.animateSlideInDown {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+}
 /* Underline Reveal  from hover.css*/
 .hvr-underline-reveal {
   display: inline-block;
@@ -57,7 +100,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #2098d1;
+  background: lightcoral;
   height: 4px;
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
@@ -79,3 +122,126 @@ body {
 #slider {
   max-height: 100vh;
 }
+
+/*************
+ about
+*************/
+#about {
+  background: #286090;
+  text-align: center;
+}
+#about #main.container {
+  width: 100%;
+  padding: 0px;
+}
+#about .left {
+  padding: 5vh 0vh;
+  color: ghostwhite;
+  margin: auto;
+}
+#about .right {
+  background: ghostwhite;
+  padding: 5vh 10vh;
+  color: #286090;
+}
+#about .right p {
+  line-height: 1.9;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 17px;
+}
+@media only screen and (min-width : 768px) {
+  #about .left {
+    padding: 0vh;
+  }
+  #about .right {
+    padding: 11vh;
+  }
+  #about #main.container {
+    display: flex;
+  }
+}
+
+#about .divider4 {
+    background-image: url('../img/divider4.jpg');
+    margin-top: 0px !important;
+    margin-bottom: 45px;
+}
+#about .section-divider {
+    z-index: 999;
+    width: 100%;
+    display: table;
+    max-height: 450px;
+    border-bottom: 2px solid #E6EAED;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    margin-top: 45px;
+    background-position: center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;
+    text-align: center;
+  }
+#about .textdivider h1 {
+    padding-top: 70px;
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+}
+#about hr {
+    position: relative;
+    border: none;
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+}
+#about hr:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: #ccc;
+}
+#about .textdivider p {
+    color: white;
+    font-size: 25px;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+/*aside.callout {
+    height: 400px;
+    color: #fff;
+    background: url(../img/callout.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}*/
+/*#about aside.callout, .header {
+    display: table;
+    width: 100%;
+}
+#about aside .text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#about aside .text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.1em;
+    font-weight: 701;
+}*/
