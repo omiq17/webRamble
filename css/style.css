@@ -3,7 +3,7 @@ body {
   font-size: 16px;
 }
 h1 {
-  font-size: 2.7em !important;
+  font-size: 51px !important;
 }
 /*************
  header
@@ -235,19 +235,19 @@ h1 {
 #service .container {
   padding-bottom: 25px;
 }
-#service h1 {
+#service h1.head {
   position: relative;
   padding-top: 45px;
   padding-bottom: 15px;
   margin: 0px;
 }
-#service h1:after {
+#service h1.head:after {
   content: "";
   position: absolute;
   display: block;
   width: 80px;
   height: 2px;
-  background: #6173f4;
+  background: #286090;
   left: 50%;
   margin-left: -40px;
   bottom: 0;
@@ -303,7 +303,7 @@ h1 {
     padding: 0;
 }
 
-/*aside.callout {
+#service aside.callout {
     height: 400px;
     color: #fff;
     background: url(../img/callout.jpg) center center no-repeat;
@@ -311,19 +311,193 @@ h1 {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}*/
-/*#about aside.callout, .header {
+}
+#service aside.callout, .header {
     display: table;
     width: 100%;
 }
-#about aside .text-vertical-center {
+#service aside .text-vertical-center {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
-#about aside .text-vertical-center h1 {
+#service aside .text-vertical-center h1 {
     margin: 0;
     padding: 0;
-    font-size: 4.1em;
-    font-weight: 701;
-}*/
+    font-size: 4.1em !important;
+    font-weight: 701 !important;
+}
+
+
+/*--------------------
+  Portfolio
+--------------------*/
+.row-0-gutter {
+    margin-left: -13px;
+    margin-right: -13px;
+}
+
+.col-0-gutter {
+	padding-left: 0;
+	padding-right: 0;
+}
+.light-bg {
+    background-color: lavender;
+}
+
+section {
+    padding: 70px 0;
+}
+.section-title h2 {
+    font-size: 51px;
+    color: #286090;
+    /*font-weight: 900;*/
+    /*letter-spacing: -0.6px;*/
+    position: relative;
+    margin: 0 0 50px 0;
+    padding-bottom: 15px;
+}
+.section-title h2:after {
+    left: 50%;
+    z-index: 1;
+    width: 60px;
+    height: 3px;
+    content: " ";
+    bottom: -5px;
+    margin-left: -30px;
+    text-align: center;
+    position: absolute;
+    background: #286090;
+}
+.section-title p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 31px;
+    color: #286090;
+    margin: 20px 100px 60px 100px;
+}
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0 1px 1px 0 !important;
+    background: #726FB9;
+    text-align: center;
+    cursor: pointer;
+}
+
+figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.ot-portfolio-item figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+.ot-portfolio-item figure figcaption, .ot-portfolio-item figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+figure.effect-bubba {
+	background: #000;
+	margin-bottom: 1px;
+}
+
+figure.effect-bubba img {
+	opacity: 0.90;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+	opacity: 0.4;
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+figure.effect-bubba h2 {
+	opacity: 0;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-top: 30%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+}
+
+figure.effect-bubba p {
+	color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 20px 2.5em;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+@media only screen and (max-width : 768px) {
+  .section-title p {
+      line-height: 21px;
+      margin: 5px 50px 55px;
+  }
+}
+#afterPortfolio .bg-primary{
+  background-color: #286090 ;
+  color: ghostwhite;
+}
+#afterPortfolio .call-to-action {
+    padding: 50px 0;
+}
