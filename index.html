@@ -9,93 +9,307 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:500" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+  	<link rel="stylesheet" href="css/ideal-image-slider.css">
+  	<link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
 
   <body>
-    <h1 class="text-center text-uppercase">Hello, webRamble!</h1>
-    <!--Contact-section-->
-  <div class="container contact-section" id="Contact">
-      <h4 class="text-center text-uppercase">contact with us</h4><hr>
-    <div class="row">
-      <div class="col-md-12 form-section">
-        <form action="contact.php" method="post" role="form" id="contact-form">
-              
-              <div class="messages"></div>
-
-              <div class="controls">
-              
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="form_name">
-                      FirstName *
-                    </label>
-                    <input type="text" name="name" id="form_name" class="form-control" placeholder="Please Enter Your First Name *" required="required" data-error="Firstname is required.">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="form_lastname">
-                      LastName *
-                    </label>
-                    <input type="text" name="surname" id="form_lastname" class="form-control" placeholder="Please Enter Your Last Name" required="required" data-error="Lastname is required.">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="form_email">
-                      Email *
-                    </label>
-                    <input type="email" name="email" id="form_email" class="form-control" placeholder="someone@domain.com" required="required" data-error="valid email is required.">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="form_phone">
-                      Phone
-                    </label>
-                    <input type="tel" name="phone" id="form_phone" placeholder="xxxxxxxxxxx" class="form-control">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <label for="form_message">
-                      Message *
-                    </label>
-                    <textarea class="form-control" placeholder="Your Messages" required="required" data-error="Please leave us a message." name="message" id="form_message" rows="4"></textarea>
-                    <div class="help-block with-error"></div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <input type="submit" name="send" value="Submit Here" class="btn btn-success btn-send">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <p class="text-muted">
-                    <strong>*</strong> These fields are required.
-                  </p>
-                </div>
-              </div>
-              </div>
-            </form>
+    <header id="header">
+      <div class="container">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">WebRamble</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a class="hvr-underline-reveal" href="#">About</a></li>
+                <li><a class="hvr-underline-reveal" href="#">Service</a></li>
+                <li><a class="hvr-underline-reveal" href="#">Portfolio</a></li>
+                <li><a class="hvr-underline-reveal" href="#">Team</a></li>
+                <li><a class="hvr-underline-reveal" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
+    </header>
+
+    <div id="slider">
+  		<img src="img/2.jpg" data-src-2x="img/2@2x.jpg" alt="Slide 1" />
+  		<img data-src="img/1.jpg" data-src-2x="img/1@2x.jpg" src="" alt="Slide 2" />
+  		<img data-src="img/3.jpg" data-src-2x="img/3@2x.jpg" src="" alt="Slide 3" />
+  	</div>
+
+    <div id="about">
+      <div class="container" id="main">
+        <div class="left col-sm-6 col-xs-12">
+          <h1>What We Are All About</h1>
+
+        </div>
+        <div class="right col-sm-6 col-xs-12">
+          <p>
+          	<span>WebRamble</span> is one of the most reputated and reliable web development companies to take you on the Web with your complex and expected projects. If you are looking for the Best Web Development companies at resonable cost , you just found it. <br>
+          	We provided with innovative web design based on UX/UI design,web application, web development
+          </p>
+          <p>
+          	We are best at creative design and web maintainence to meet up client requirement. And giving 24/7 hours servicing with pleasure. With over years of experience in designing, developing and maintaining web applications and projects we are best choices to take your startup,developnig and pro business on the web.
+          </p>
+          <p>
+          	Our mission and vission to take you in IT whatever your business like and make it Digitalized. It helps to spread your idea,creativity among the world. WebRamble started in 2015 at the end of Decembar with experienced and creative Developer,Designer.Fell free to make your step on the web with us. 
+          </p>
+          <p>
+          	<a href="" class="btn btn-filled">Start Project</a>
+          	<a href="" class="btn btn-bordered">Customer Care/Hotline</a>
+
+          </p>
+
+        </div>
+      </div>
+      <section class="section-divider textdivider divider4">
+      			<div class="container">
+      				<h1>We Help You To Go One Step Ahead With Us</h1>
+      				<hr>
+      				<p>There’s more to design than meets the eye. It’s when it meets the heart that design creates a meaningful, lasting connection with the audience.</p>
+      			</div><!-- container -->
+      		</section>
     </div>
-  </div>
-  <!--endd of contact section-->
+
+    <div id="service">
+      <h1 class="head">What We Do</h1>
+      <h3 class="shortDes">Far far away, behind the word mountains, far from the countries
+        Vokalia and Consonantia, there live the blind texts.</h3>
+      <div class="container">
+        <div class="col-xs-12 col-md-4">
+          <div class="box to-animate fadeInUp animated">
+          	<div class="icon colored-1">
+              <span><i class="fa fa-picture-o"></i></span>
+            </div>
+          	<h3>Web Design</h3>
+          	<p>Far far away, behind the word mountains, far from the
+                countries Vokalia and Consonantia, there live the blind
+                texts. Separated they live in Bookmarksgrove right at
+                the coast of the Semantics, a large language ocean.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="box">
+          	<div class="icon colored-2">
+              <span><i class="fa fa-cogs"></i></i></span>
+            </div>
+          	<h3>Web Development</h3>
+          	<p>Far far away, behind the word mountains, far from the
+                countries Vokalia and Consonantia, there live the blind
+                texts. Separated they live in Bookmarksgrove right at
+                the coast of the Semantics, a large language ocean.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="box to-animate fadeInUp animated">
+          	<div class="icon colored-3">
+              <span><i class="fa fa-code"></i></span>
+            </div>
+          	<h3>Web Application</h3>
+          	<p>Far far away, behind the word mountains, far from the
+                countries Vokalia and Consonantia, there live the blind
+                texts. Separated they live in Bookmarksgrove right at
+                the coast of the Semantics, a large language ocean.
+            </p>
+          </div>
+        </div>
+      </div>
+      <aside class="callout">
+          <div class="text-vertical-center">
+              <h1>So,You need us?<br>We are willing to help you.</h1>
+          </div>
+      </aside>
+    </div>
+
+    <section id="portfolio" class="light-bg">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="section-title">
+						<h2>We Create Cool Stuff</h2>
+						<p>Our portfolio is the best way to show our work, you can see here a big range of our work. Check them all and you will find what you are looking for.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row row-0-gutter">
+				<!-- start portfolio item -->
+				<div class="col-md-4 col-0-gutter">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="img/portfolio-1.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Dean & Letter</h2>
+								<p>Branding, Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4 col-0-gutter">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="img/portfolio-2.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Startup Framework</h2>
+								<p>Branding, Web Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-2">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4 col-0-gutter">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="img/portfolio-3.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Lamp & Velvet</h2>
+								<p>Branding, Web Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-3">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+			<div class="row row-0-gutter">
+				<!-- start portfolio item -->
+				<div class="col-md-4 col-0-gutter">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="img/portfolio-4.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Smart Name</h2>
+								<p>Branding, Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-4">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4 col-0-gutter">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="img/portfolio-5.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Fast People</h2>
+								<p>Branding, Web Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-5">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+				<!-- start portfolio item -->
+				<div class="col-md-4 col-0-gutter">
+					<div class="ot-portfolio-item">
+						<figure class="effect-bubba">
+							<img src="img/portfolio-6.jpg" alt="img02" class="img-responsive" />
+							<figcaption>
+								<h2>Kites & Stars</h2>
+								<p>Branding, Web Design</p>
+								<a href="#" data-toggle="modal" data-target="#Modal-2">View more</a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<!-- end portfolio item -->
+			</div>
+			</div><!-- end container -->
+		</section>
+    <div id="afterPortfolio">
+      <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Impressed with our works?</h2>
+                    <h2>Then give us the opportunity to work for you.</h2>
+                </div>
+            </div>
+        </div>
+    </aside>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script src="js/jquery-3.1.0.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ideal-image-slider.js"></script>
+  	<script src="js/iis-bullet-nav.js"></script>
+    <script>
+    $(document).ready(function(){
+      ///////////////
+      // slider setup
+      ///////////////
+      var slider = new IdealImageSlider.Slider({
+        selector: "#slider",
+        effect: 'fade',
+        interval: 3001,
+        transitionDuration: 551
+      });
+    	slider.addBulletNav();
+    	slider.start();
+
+      ///////////////
+      // navbar animation setup
+      ///////////////
+      var height = $("#header").height();
+      var header = $("header");
+      var menu = $("#header .navbar-default .navbar-nav>li>a");
+      var brand = $("#header .navbar-brand");
+      var lastScrollTop = 0;
+      $(document).on('scroll',function() {
+        if($(window).width()>=968){
+          if($(this).scrollTop()+(2.5*height)>=$('#about').position().top) {
+            header.css("background", "ghostwhite");
+            menu.css("color", "#286090");
+            brand.css("color", "#286090");
+            header.addClass("navbar-fixed-top animateSlideInDown");
+          } else if ($(this).scrollTop()+(2.5*height)<=$('#about').position().top) {
+            header.css("background", "#286090");
+            menu.css("color", "ghostwhite");
+            brand.css("color", "ghostwhite");
+            header.removeClass("navbar-fixed-top animateSlideInDown");
+          }
+        } else {
+          console.log($(this).scrollTop());
+          var st = $(this).scrollTop();
+             if (st < lastScrollTop && st>150){
+               header.css("background", "ghostwhite");
+               menu.css("color", "#286090");
+               brand.css("color", "#286090");
+               header.addClass("navbar-fixed-top animateSlideInDown");
+             } else {
+               header.css("background", "#286090");
+               menu.css("color", "ghostwhite");
+               brand.css("color", "ghostwhite");
+               header.removeClass("navbar-fixed-top animateSlideInDown");
+             }
+             lastScrollTop = st;
+        }
+
+      })
+    });
+  	</script>
   </body>
 </html>
