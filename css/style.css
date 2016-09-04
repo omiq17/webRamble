@@ -530,3 +530,23 @@ opacity:.7;
 color:#EE9024;
 opacity:.7;
 }
+.box{
+  opacity: 0.8;
+}
+.box:hover {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+ .few-more-work{
+  height: 400px;
+    background: url(../sb.JPG) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: -5.1%;
+}
+.con{
+  padding-top: 2%;
+  margin-top: 2%;
+}
