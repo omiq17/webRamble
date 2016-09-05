@@ -23,7 +23,6 @@ h1 {
   border-radius: 0px;
 }
 #header #myNavbar li.active a {
-  /*background: transparent;*/
   background: none;
   color: red;
 }
@@ -267,6 +266,9 @@ h1 {
     position: relative;
     /*text-align: justify;
     text-justify: inter-word;*/
+}
+#service .box p{
+    height: 110px;
 }
 #service .box .icon.colored-1 {
     background: #e52b50;
@@ -537,4 +539,4 @@ figure.effect-bubba:hover p {
     padding-top: 25px;
     line-height: 28px;
     margin-bottom: 25px;
-}
+/*}*/
