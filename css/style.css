@@ -501,3 +501,40 @@ figure.effect-bubba:hover p {
 #afterPortfolio .call-to-action {
     padding: 50px 0;
 }
+/*--------------------
+  Team
+--------------------*/
+#team {
+  text-align: center;
+  color: #286090;
+  background: lavender;
+}
+#team h1 {
+    padding-top: 45px;
+    margin: 0px;
+}
+#team hr {
+    position: relative;
+    border: none;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid transparent;
+    margin: 1em 0;
+    padding: 0;
+}
+#team hr:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background:#286090;
+    margin-left: -30px;
+}
+#team .white p {
+    padding-top: 25px;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
