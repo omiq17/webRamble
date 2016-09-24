@@ -561,8 +561,10 @@
       ///////////////
       var height = $("#header").height();
       console.log(height);
-      $('#header a.hvr-underline-reveal').bind('click', function(event) {
+      $('#header #myNavbar a.hvr-underline-reveal').bind('click', function(event) {
           event.preventDefault();
+          $('#header #myNavbar a.active').removeClass("active");
+          $(this).addClass("active");
           var $anchor = $(this);
           if( $("#header").hasClass("navbar-fixed-top")){
             $('html, body').stop().animate({
@@ -576,6 +578,7 @@
       });
       $('#header a.navbar-brand').bind('click', function(event) {
           event.preventDefault();
+          $('#header #myNavbar a.active').removeClass("active");
             $('html, body').stop().animate({
                 scrollTop: 0
             }, 1000);

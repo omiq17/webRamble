@@ -29,6 +29,12 @@ h1 {
 #header .navbar-default .navbar-nav>li>a {
     color: ghostwhite;
 }
+#header .navbar-default .navbar-nav>li>a.active {
+    color: lightcoral !important;
+}
+/*#header .navbar-default .navbar-nav>li>a:active {
+    background: none;*/
+}
 #header .navbar-default .navbar-nav>li>a:hover {
     color: lightcoral !important;
     -webkit-transition: all ease-in 0.3s;
